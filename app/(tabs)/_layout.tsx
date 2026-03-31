@@ -26,6 +26,13 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="quiz"
+        options={{
+          title: 'Quiz',
+          tabBarIcon: ({ color }) => <TabBarIcon name="fire" color={color} />,
+        }}
+      />
+      <Tabs.Screen
         name="match"
         options={{
           title: 'Match',
@@ -51,6 +58,7 @@ export default function TabLayout() {
         options={{
           title: 'Profil',
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
+          href: null, // hidden from tab bar, accessible via header
         }}
       />
     </Tabs>
